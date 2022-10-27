@@ -1,0 +1,18 @@
+
+services:
+  - type: web
+    name: kustomer_voice_poc
+    env: node
+    plan: free
+    branch: main
+    healthCheckPath: /
+    autoDeploy: true
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BASE_URL
+        value: https://kustomer_voice_poc.onrender.com
+      - key: CLIENT_ID
+        value: 2bc0b6885992375ee60ad508552bd6db
+      - key: CLIENT_SECRET
+        value: 310dfdf93855f1e03b26882da39519b8
